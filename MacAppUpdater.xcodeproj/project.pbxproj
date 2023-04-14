@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B62107229B8BB6B002BF39E /* SampleToolbars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B62107129B8BB6B002BF39E /* SampleToolbars.swift */; };
+		8B68047B29E9515900E7B42B /* MenuCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68047A29E9515900E7B42B /* MenuCommands.swift */; };
+		8B68047D29E971C300E7B42B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B68047C29E971C300E7B42B /* SettingsView.swift */; };
 		8BC1F41329B2608F00585AD3 /* MacAppUpdaterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1F41229B2608F00585AD3 /* MacAppUpdaterApp.swift */; };
 		8BC1F41529B2608F00585AD3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1F41429B2608F00585AD3 /* ContentView.swift */; };
 		8BC1F41729B2608F00585AD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BC1F41629B2608F00585AD3 /* Assets.xcassets */; };
@@ -36,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B62107129B8BB6B002BF39E /* SampleToolbars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleToolbars.swift; sourceTree = "<group>"; };
+		8B68047A29E9515900E7B42B /* MenuCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommands.swift; sourceTree = "<group>"; };
+		8B68047C29E971C300E7B42B /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		8B6961AF29E8D667002CB342 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8BC1F40F29B2608F00585AD3 /* MacAppUpdater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacAppUpdater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BC1F41229B2608F00585AD3 /* MacAppUpdaterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAppUpdaterApp.swift; sourceTree = "<group>"; };
 		8BC1F41429B2608F00585AD3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +106,7 @@
 		8BC1F41129B2608F00585AD3 /* MacAppUpdater */ = {
 			isa = PBXGroup;
 			children = (
+				8B6961AF29E8D667002CB342 /* Info.plist */,
 				8BC1F41229B2608F00585AD3 /* MacAppUpdaterApp.swift */,
 				8BC1F41429B2608F00585AD3 /* ContentView.swift */,
 				8BC1F41629B2608F00585AD3 /* Assets.xcassets */,
@@ -106,6 +114,9 @@
 				8BC1F42029B2608F00585AD3 /* MacAppUpdater.entitlements */,
 				8BC1F41D29B2608F00585AD3 /* MacAppUpdater.xcdatamodeld */,
 				8BC1F41829B2608F00585AD3 /* Preview Content */,
+				8B62107129B8BB6B002BF39E /* SampleToolbars.swift */,
+				8B68047A29E9515900E7B42B /* MenuCommands.swift */,
+				8B68047C29E971C300E7B42B /* SettingsView.swift */,
 			);
 			path = MacAppUpdater;
 			sourceTree = "<group>";
@@ -216,11 +227,12 @@
 			};
 			buildConfigurationList = 8BC1F40A29B2608F00585AD3 /* Build configuration list for PBXProject "MacAppUpdater" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "zh-Hans";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 8BC1F40629B2608F00585AD3;
 			productRefGroup = 8BC1F41029B2608F00585AD3 /* Products */;
@@ -265,10 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B68047D29E971C300E7B42B /* SettingsView.swift in Sources */,
 				8BC1F41C29B2608F00585AD3 /* Persistence.swift in Sources */,
 				8BC1F41F29B2608F00585AD3 /* MacAppUpdater.xcdatamodeld in Sources */,
+				8B68047B29E9515900E7B42B /* MenuCommands.swift in Sources */,
 				8BC1F41529B2608F00585AD3 /* ContentView.swift in Sources */,
 				8BC1F41329B2608F00585AD3 /* MacAppUpdaterApp.swift in Sources */,
+				8B62107229B8BB6B002BF39E /* SampleToolbars.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +447,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacAppUpdater/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -460,6 +477,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacAppUpdater/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

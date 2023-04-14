@@ -10,14 +10,20 @@ import SwiftUI
 @main
 struct MacAppUpdaterApp: App {
     let persistenceController = PersistenceController.shared
-
+    @State private var toggleSetting = true
     var body: some Scene {
-        WindowGroup("MAC") {
+        WindowGroup("Mac App Updater") {
+//            SampleToolbars()
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
-//        WindowGroup("MainWindow") {
-//            ContentView()
-//        }
+        .commands {
+            MenuCommands(toggleSetting: $toggleSetting)
+        }
+        #if os(macOS)
+        Settings {
+            SettingsView()
+        }
+        #endif
     }
 }

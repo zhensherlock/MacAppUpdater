@@ -31,12 +31,16 @@ struct ContentView: View {
             .toolbar {
                 ToolbarItem {
                     Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                        Label("Add Item", systemImage: "arrow.clockwise")
                     }
                 }
             }
             Text("Select an item")
         }
+//        .toolbarBackground(.linearGradient(
+//                colors: [.blue, .purple],
+//                startPoint: .leading,
+//                endPoint: .trailing))
     }
 
     private func addItem() {
