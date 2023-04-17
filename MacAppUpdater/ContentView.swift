@@ -15,6 +15,10 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @State private var isOn = false
+    
+    @State private var tintColor: Color = .accentColor
 
     var body: some View {
         NavigationView {
@@ -36,6 +40,30 @@ struct ContentView: View {
                 }
             }
             Text("Select an item")
+            
+            Form {
+                Toggle("使用指定的颜色", isOn: $isOn)
+                
+                Section {
+                    HStack {
+                        Text("Swift")
+                        Spacer()
+                        Image(systemName: "swift")
+                            .foregroundColor(tintColor)
+                    }
+                } footer: {
+                    Text("footer")
+                    Button("这个是一个按钮") {}
+                }
+                
+                Section {
+                    Button("这是一个按钮") {}
+                }
+            }
+            .formStyle(.grouped)
+            .onChange(of: isOn) { newValue in
+                tintColor = newValue ? .orange : .accentColor
+            }
         }
 //        .toolbarBackground(.linearGradient(
 //                colors: [.blue, .purple],
