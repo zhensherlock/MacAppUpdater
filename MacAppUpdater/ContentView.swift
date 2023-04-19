@@ -61,6 +61,7 @@ struct ContentView: View {
                 }
             }
             .formStyle(.grouped)
+            .tint(.purple)
             .onChange(of: isOn) { newValue in
                 tintColor = newValue ? .orange : .accentColor
             }
